@@ -18,32 +18,32 @@ public class Allganize_Solution3 {
     public String solution(String[] strMetrix) {
         int[][] matrix = this.parseStrToIntMetrix(strMetrix);
         List<Integer> result = new ArrayList<>();
-        int m = matrix.length;
-        int n = matrix[0].length;
+
+        int m = matrix.length; // row
+        int n = matrix[0].length; //col
 
         // 대각선 방향으로 탐색
-        for (int d = 0; d < m + n - 1; d++) {
-            if (d % 2 == 0) {
+        for (int i = 0; i < m + n - 1; i++) {
+            if (i % 2 == 0) {
                 // 대각선 위로 탐색
-                int r = Math.min(d, m - 1);
-                int c = d - r;
-                while (r >= 0 && c < n) {
-                    result.add(matrix[r][c]);
-                    r--;
-                    c++;
+                int row = Math.min(i, m - 1);
+                int col = i - row;
+                while (row >= 0 && col < n) {
+                    result.add(matrix[row][col]);
+                    row--;
+                    col++;
                 }
             } else {
                 // 대각선 아래로 탐색
-                int c = Math.min(d, n - 1);
-                int r = d - c;
-                while (c >= 0 && r < m) {
-                    result.add(matrix[r][c]);
-                    r++;
-                    c--;
+                int col = Math.min(i, n - 1);
+                int row = i - col;
+                while (col >= 0 && row < m) {
+                    result.add(matrix[row][col]);
+                    row++;
+                    col--;
                 }
             }
         }
-
         return result.stream().map(String::valueOf).collect(Collectors.joining(", "));
     }
 
