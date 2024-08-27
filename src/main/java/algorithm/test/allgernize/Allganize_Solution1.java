@@ -1,4 +1,4 @@
-package algorithm.test;
+package algorithm.test.allgernize;
 
 import java.util.ArrayList;
 import java.util.List;

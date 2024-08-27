@@ -1,4 +1,4 @@
-package algorithm.test;
+package algorithm.test.allgernize;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -33,7 +33,7 @@ public class Allganize_Solution2 {
     public static void main(String[] args) {
         System.out.println("Allganize_Solution2");
         Allganize_Solution2 main = new Allganize_Solution2();
-        String result = main.solution("Hello appleaaa pie");
+        String result = main.solution("Hello apple pie");
         System.out.println(result);
     }
 }
