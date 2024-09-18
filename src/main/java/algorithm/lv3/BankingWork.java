@@ -21,7 +21,6 @@ import java.util.stream.Collectors;
 public class BankingWork {
 
     public int[] solution(int[] depositArray) {
-        List<Integer> accountList = new ArrayList<>();
         Stack<Integer> stack = new Stack<>();
 
         for (int deposit : depositArray) {
@@ -40,11 +39,7 @@ public class BankingWork {
                 }
             }
         }
-
-        while (!stack.isEmpty()) {
-            accountList.add(stack.pop());
-        }
-        return accountList.stream().mapToInt(Integer::intValue).toArray();
+        return stack.stream().mapToInt(Integer::intValue).toArray();
     }
 
     public static void main(String[] args) {
