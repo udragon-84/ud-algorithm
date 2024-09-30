@@ -1,10 +1,8 @@
 package algorithm.lv1;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
-public class ArrayRotation {
+public class CyclicRotation {
 
     /**
      * 주어진 배열 A는 N개의 정수로 구성되어 있습니다.
@@ -28,7 +26,7 @@ public class ArrayRotation {
     }
 
     public static void main(String[] args) {
-        ArrayRotation main = new ArrayRotation();
+        CyclicRotation main = new CyclicRotation();
         int[] A = { 3, 8, 9, 7, 6 };
         int K = 3;
         int[] result = main.solution(A, K);
